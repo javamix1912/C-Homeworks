@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            float distanceInMetres = float.Parse(Console.ReadLine());
+            float hours = float.Parse(Console.ReadLine());
+            float minutes =float.Parse(Console.ReadLine());
+            float seconds =float.Parse(Console.ReadLine());
+
+            var totalSeconds = seconds + minutes * 60 + (hours * 60 * 60);
+            var metresPerSecond = distanceInMetres / totalSeconds;
+            var kmPerHour = (distanceInMetres / 1000) / (totalSeconds / 60 / 60);
+            var milesPerHour = (distanceInMetres / 1609 ) /(totalSeconds / 60 / 60);
+
+            Console.WriteLine(metresPerSecond);
+            Console.WriteLine(kmPerHour);
+            Console.WriteLine(milesPerHour);
+
+
+
+
+
+
+
+
+
+        }
+    }
+}

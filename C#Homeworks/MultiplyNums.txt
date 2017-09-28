@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int num = int.Parse(Console.ReadLine());
+                int times = 1;
+
+                do
+                {
+                    Console.WriteLine($"{num} X {times} = {num * times}");
+                    times++;
+                }
+                while (times <= 10);
+            }
+            catch
+            {
+                Console.WriteLine("Add a number idiot!");
+            }
+
+
+
+        }
+    }
+}

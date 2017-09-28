@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModule
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            var proffession = Console.ReadLine().ToLower();
+            var qty = double.Parse(Console.ReadLine());
+            var waterPrice = 0.70;
+            var coffeePrice = 1.00;
+            var beerPrice = 1.70;
+            var teaPrice = 1.20;
+
+            if (proffession == "athlete")
+            {
+                Console.WriteLine($"The Athlete has to pay {((waterPrice)*qty):f2}.");
+            }
+            else if(proffession == "softuni student")
+            {
+                Console.WriteLine($"The SoftUni Student has to pay {((beerPrice) * qty):f2}");
+            }
+            else if (proffession == "chef")
+            {
+                Console.WriteLine($"The Chef has to pay {((teaPrice)* qty):f2}.");
+            }
+       //    else if (proffession == "bussinessman" || (proffession=="bussinesswoman"))
+       //    {
+       //        Console.WriteLine($"The SoftUni Student has to pay {((coffeePrice) * qty):f2}.");
+       //    }
+
+
+
+        }
+    }
+}
+      

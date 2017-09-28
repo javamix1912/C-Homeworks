@@ -1,0 +1,1 @@
+Right Click on the project >>> Set as StartUP project

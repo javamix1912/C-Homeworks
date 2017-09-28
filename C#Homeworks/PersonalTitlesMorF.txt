@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace GenterGuess
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var age = double.Parse(Console.ReadLine());
+            var gender = Console.ReadLine();
+
+            var maleOrFemale = gender.ToLower() == "m";
+
+            if (age >= 16)
+            {
+                if (maleOrFemale)
+                {
+                    Console.WriteLine("Mr.");
+                }
+                else
+                {
+                    Console.WriteLine("Ms.");
+                }
+            }
+            else
+            {
+                if (maleOrFemale)
+                {
+                    Console.WriteLine("Master");
+                }
+                else
+                {
+                    Console.WriteLine("Miss");
+                }
+            }
+        }
+    }
+}

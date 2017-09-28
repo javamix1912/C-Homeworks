@@ -1,0 +1,75 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string day = Console.ReadLine().ToLower();
+            int age = int.Parse(Console.ReadLine());
+            var price = 0;
+
+            if (age > 122 || age < 0)
+            {
+                Console.WriteLine("Error!");
+            }
+
+                if (day == "weekday" && (age >= 0 && age <= 18))
+                {
+                    price = 12;
+                    Console.WriteLine($"{price}$");
+                }
+                else if (day == "weekday" && (age > 18 && age <= 64))
+                {
+                    price = 18;
+                    Console.WriteLine($"{price}$");
+                }
+                else if (day == "weekday" && (age > 64 && age <= 122))
+                {
+                    price = 12;
+                    Console.WriteLine($"{price}$");
+                }
+
+
+                if (day == "weekend" && (age >= 0 && age <= 18))
+                {
+                    price = 15;
+                    Console.WriteLine($"{price}$");
+                }
+                else if (day == "weekend" && (age > 18 && age <= 64))
+                {
+                    price = 20;
+                    Console.WriteLine($"{price}$");
+                }
+                else if (day == "weekend" && (age > 64 && age <= 122))
+                {
+                    price = 15;
+                    Console.WriteLine($"{price}$");
+                }
+
+
+                if (day == "holiday" && (age >= 0 && age <= 18))
+                {
+                    price = 5;
+                    Console.WriteLine($"{price}$");
+                }
+                else if (day == "holiday" && (age > 18 && age <= 64))
+                {
+                    price = 12;
+                    Console.WriteLine($"{price}$");
+                }
+                else if (day == "holiday" && (age > 64 && age <= 122))
+                {
+                    price = 10;
+                    Console.WriteLine($"{price}$");
+                }
+   
+
+        }
+    }
+}

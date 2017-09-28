@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SmallShop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var fruit = Console.ReadLine();
+            var rest = ("water");
+
+            if (fruit == "banana" || fruit == "apple" || fruit == "kiwi" || fruit == "cherry" || fruit == "lemon" || fruit == "grapes")
+                
+            {
+                Console.WriteLine("fruit");
+                  
+                }
+           
+
+
+           
+            else
+            {
+                Console.WriteLine("vegetable");
+            }
+
+        }
+    }
+}

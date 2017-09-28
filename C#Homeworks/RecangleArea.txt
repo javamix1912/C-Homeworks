@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RectangleArea
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var a = decimal.Parse(Console.ReadLine());
+            var b = decimal.Parse(Console.ReadLine());
+            var area1 = (a * b);
+                var area = Math.Round(area1, 2);
+            Console.WriteLine("Rectangle area = " + area);
+            
+        }
+
+    }
+}

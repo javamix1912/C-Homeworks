@@ -1,0 +1,217 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Loops
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int smallHallPrice = 2500;
+            int terracePrice = 5000;
+            int greatHallPrice = 7500;
+
+
+            int normalPackagePrice = 500;
+            int goldPackagePrice = 750;
+            int platinumPackagePrice = 1000;
+
+            int groupSize = int.Parse(Console.ReadLine());
+            string package = Console.ReadLine();
+            if (groupSize > 120)
+            {
+                Console.WriteLine("We do not have an appropriate hall.");
+            }
+
+            if (groupSize <= 50)
+            {
+                if (package=="Normal")
+                {
+                    var pricePerPerson = ((smallHallPrice + normalPackagePrice) * 0.95);
+                    var price1 = pricePerPerson / groupSize;
+                    Console.WriteLine($"We can offer you the Small Hall\nThe price per person is {price1:F2}$");
+                } 
+                else if (package == "Gold")
+                {
+                    var pricePerPerson = ((smallHallPrice + goldPackagePrice) * 0.90);
+                    var price2 = pricePerPerson / groupSize;
+                    Console.WriteLine($"We can offer you the Small Hall\nThe price per person is {price2:F2}$");
+                }
+                else if (package == "Platinum")
+                {
+                    var pricePerPerson = ((smallHallPrice + platinumPackagePrice) * 0.75);
+                    var price3 = pricePerPerson / groupSize;
+                    Console.WriteLine($"We can offer you the Small Hall\nThe price per person is {price3:F2}$");
+                }
+
+            }
+            if (groupSize > 50 && groupSize < 100)
+            {
+                if (package == "Normal")
+                {
+                    var pricePerPerson = ((terracePrice + normalPackagePrice) * 0.05);
+                    var price11 = (terracePrice + normalPackagePrice - pricePerPerson) / groupSize;
+                    Console.WriteLine($"We can offer you the Terrace\nThe price per person is {price11:F2}$");
+                }
+                else if (package == "Gold")
+                {
+                    var pricePerPerson = ((terracePrice + goldPackagePrice) * 0.10);
+                    var price22 = (terracePrice + goldPackagePrice - pricePerPerson) / groupSize;
+                    Console.WriteLine($"We can offer you the Terrace\nThe price per person is {price22:F2}$");
+                }
+                else if (package == "Platinum")
+                {
+                    var pricePerPerson = ((terracePrice + platinumPackagePrice) * 0.15);
+                    var price33 = (terracePrice+platinumPackagePrice - pricePerPerson) / groupSize;
+                    Console.WriteLine($"We can offer you the Terrace\nThe price per person is {price33:F2}$");
+                }
+            }
+            if (groupSize >=100 && groupSize <=120)
+            {
+                if (package == "Normal")
+                {
+                    var pricePerPerson = ((greatHallPrice + normalPackagePrice) * 0.05);
+                    var price111 = (terracePrice + normalPackagePrice - pricePerPerson) / groupSize;
+                    Console.WriteLine($"We can offer you the Terrace\nThe price per person is {price111:F2}$");
+                }
+                else if (package == "Gold")
+                {
+                    var pricePerPerson = ((greatHallPrice + goldPackagePrice) * 0.10);
+                    var price222 = (terracePrice + goldPackagePrice - pricePerPerson) / groupSize;
+                    Console.WriteLine($"We can offer you the Terrace\nThe price per person is {price222:F2}$");
+                }
+                else if (package == "Platinum")
+                {
+                    var pricePerPerson = ((greatHallPrice + platinumPackagePrice) * 0.15);
+                    var price333 = (terracePrice + platinumPackagePrice - pricePerPerson) / groupSize;
+                    Console.WriteLine($"We can offer you the Terrace\nThe price per person is {price333:F2}$");
+                }
+            }
+           
+            
+
+        }
+    }
+
+}
+
+-------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int groupSize = int.Parse(Console.ReadLine());
+            string package = Console.ReadLine();
+
+            int smallHallPrice = 2500;
+            int teracePrice = 5000;
+            int greatHallPrice = 7500;
+
+            int normalPackagePrice = 500;
+            int goldPackagePrice = 750;
+            int platinumPackagePrice = 1000;
+
+            if (groupSize <= 50)
+            {
+                if (package == "Normal")
+                {
+                    var totalPrice = (smallHallPrice + normalPackagePrice) * 0.05;
+                    var totalPrice2 = (smallHallPrice + normalPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Small Hall\nThe price per person is {0:F2}", totalPrice3);
+
+                }
+                if (package == "Gold")
+                {
+                    var totalPrice = (smallHallPrice + goldPackagePrice) * 0.10;
+                    var totalPrice2 = (smallHallPrice + goldPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Small Hall\nThe price per person is {0:F2}$", totalPrice3);
+
+                }
+                if (package == "Platinum")
+                {
+                    var totalPrice = (smallHallPrice + platinumPackagePrice) * 0.15;
+                    var totalPrice2 = (smallHallPrice + platinumPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Small Hall\nThe price per person is {0:F2}$", totalPrice3);
+
+                }
+            }
+            //Here starts 2nd condition:
+            if (groupSize > 50 && groupSize <= 100)
+            {
+                if (package == "Normal")
+                {
+                    var totalPrice = (teracePrice + normalPackagePrice) * 0.05;
+                    var totalPrice2 = (teracePrice + normalPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Terrace\nThe price per person is {0:F2}", totalPrice3);
+
+                }
+                if (package == "Gold")
+                {
+                    var totalPrice = (teracePrice + goldPackagePrice) * 0.10;
+                    var totalPrice2 = (teracePrice + goldPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Terrace\nThe price per person is {0:F2}$", totalPrice3);
+
+                }
+                if (package == "Platinum")
+                {
+                    var totalPrice = (teracePrice + platinumPackagePrice) * 0.15;
+                    var totalPrice2 = (teracePrice + platinumPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Terrace\nThe price per person is {0:F2}$", totalPrice3);
+
+                }
+            }
+            //Here starts the 3rd condition:
+            if (groupSize > 100 && groupSize <= 120)
+            {
+                if (package == "Normal")
+                {
+                    var totalPrice = (greatHallPrice + normalPackagePrice) * 0.05;
+                    var totalPrice2 = (greatHallPrice + normalPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Great Hall\nThe price per person is {0:F2}", totalPrice3);
+
+                }
+                if (package == "Gold")
+                {
+                    var totalPrice = (greatHallPrice + goldPackagePrice) * 0.10;
+                    var totalPrice2 = (greatHallPrice + goldPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Great Hall\nThe price per person is {0:F2}$", totalPrice3);
+
+                }
+                if (package == "Platinum")
+                {
+                    var totalPrice = (greatHallPrice + platinumPackagePrice) * 0.15;
+                    var totalPrice2 = (greatHallPrice + platinumPackagePrice) - totalPrice;
+                    var totalPrice3 = totalPrice2 / groupSize;
+                    Console.WriteLine("We can offer you the Great Hall\nThe price per person is {0:F2}$", totalPrice3);
+
+                }
+            }
+            if (groupSize > 120)
+            {
+                Console.WriteLine("We do not have an appropriate hall.");
+            }
+        }
+    }
+}
+
+
+

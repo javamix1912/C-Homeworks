@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+        static void printMethod(int size)
+        {
+            
+            Console.WriteLine(new String('a', size));
+        }
+        
+        
+
+        static void Main(string[] args)
+        {
+
+            printMethod(15);
+            Console.WriteLine("zdr");
+            printMethod(25);
+
+        }
+    }
+}
+
+----------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+        static void printMethod()
+        {
+            
+            Console.WriteLine("something");
+        }
+        
+        
+
+        static void Main(string[] args)
+        {
+            printMethod();
+            printMethod();
+            printMethod();
+            var a = 15;
+                var b = 5;
+            Console.WriteLine(a+b);
+        }
+    }
+}
+--------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+        static void printMethod(int num,char ch)
+        {
+
+            ;
+            Console.WriteLine(new String(ch,num));
+        }
+        
+        
+
+        static void Main(string[] args)
+        {
+            printMethod(10,'-');
+            printMethod(13, '\"');
+            printMethod(10, '+');
+
+        }
+    }
+}
+

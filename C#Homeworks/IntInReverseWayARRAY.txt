@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnotherMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+      {
+            int numQty = int.Parse(Console.ReadLine());
+            int[] array = new int[numQty];
+
+            for (int i = 0; i < numQty; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+          //  array.Reverse();
+            Console.Write(array[2]);
+            Console.Write(" "+array[1]);
+            Console.Write(" " + array[0]);
+            Console.WriteLine();
+        }
+
+    }
+}
+
+

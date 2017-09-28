@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PrFundStartingAgain
+{
+    class Program
+    {
+        static void Main()
+        {
+            string name = Console.ReadLine();
+            int volume = int.Parse(Console.ReadLine());
+            int enContent = int.Parse(Console.ReadLine());
+            int sugarContent = int.Parse(Console.ReadLine());
+
+            double enContent2 = volume * 3;
+            double sugarContent2 = volume * 0.7;
+
+            if (name.Equals("Nuka-Cola"))
+            {
+                Console.WriteLine($"{volume}ml {name}:\n{enContent2}kcal, {sugarContent2}g sugars");
+            } else if (name.Equals("Ice Cold Nuka-Cola"))
+            {
+                enContent2 = volume * 3.5;
+                sugarContent2 = volume / 1.538;
+                Console.WriteLine($"{volume}ml {name}:\n{enContent2}kcal, {sugarContent2:F1}g sugars");
+            } else
+            {
+                enContent2 = volume * 6;
+                sugarContent2 = volume * 1.4;
+                Console.WriteLine($"{volume}ml {name}:\n{enContent2}kcal, {sugarContent2}g sugars");
+            }
+
+           
+
+
+
+
+            //Nuka - Cola
+            //220
+            //300
+            //70  
+                     //220ml Nuka-Cola:
+                     //660kcal, 154g sugars
+
+
+        }
+
+    }
+}

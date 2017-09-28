@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnotherMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double sideA = double.Parse(Console.ReadLine());
+            double sideHa = double.Parse(Console.ReadLine());
+            sideA = PrintTriangleSides(sideA,sideHa);
+             Console.WriteLine(sideA);
+        }
+
+         static double PrintTriangleSides(double sideA, double sideHa)
+        {
+            return (sideA * sideHa) / 2;
+        }
+    }
+}
+

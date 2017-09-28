@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] letters = { 'H', 'E', 'L', 'L', 'O' };
+            string greeting = new string(letters);
+            Console.WriteLine(greeting);
+
+            
+        }
+    }
+}
+
+-----------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] words = { "Hello", "Mirko", "shteMresh" };
+            string message = String.Join(" ", words);
+            Console.WriteLine($"Message is: {message}");
+        }
+    }
+}
+--------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] nums = { 1, 2, 3, 4, 5 };
+            int sum = nums[0] + nums[0]; // 0 is the first num(1),so 1+1=2
+            Console.WriteLine(sum);
+        }
+    }
+}
+
+

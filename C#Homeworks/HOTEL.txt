@@ -1,0 +1,82 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace hotelRooms
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string month = Console.ReadLine();
+            byte nights = byte.Parse(Console.ReadLine());
+
+            var studioPriceMO = 50;    //May and Octomber
+            var doubleRoomPriceMO = 65;
+            var suitePriceMO = 75;
+
+            var studioPriceJS = 60;    //June and September
+            var doubleRoomPriceJS = 72;
+            var suitePriceJS = 82;
+
+            var studioPriceJAD = 68;    //July , August, December
+            var doubleRoomPriceJAD = 77;
+            var suitePriceJAD = 89;
+
+    
+
+            if (month=="May" || month=="Octomber")
+            {
+                if (nights > 7)
+                {
+                    var price = (studioPriceMO * nights) * 0.05;
+                    var price2 = studioPriceMO * nights - price;
+
+                    Console.WriteLine($"Studio: {price2:F2} lv.\nDouble: {doubleRoomPriceMO * nights:F2} lv.\nSuite: {suitePriceMO * nights:F2} lv.");
+                }
+                else
+                {
+                    Console.WriteLine($"Studio: {studioPriceMO * nights:F2} lv.\nDouble: {doubleRoomPriceMO * nights:F2} lv.\nSuite: {suitePriceMO * nights:F2} lv.");
+                }
+            
+            }
+            if (month == "June" || month== "September")
+            {
+                if (nights > 11 && nights > 14)
+                {
+                    var price = (doubleRoomPriceJS * nights) * 0.10;
+                    var price2 = doubleRoomPriceJS * nights - price;
+                    Console.WriteLine($"Studio: {suitePriceJS:F2} lv.\nDouble: {price2 * nights:F2} lv.\nSuite: {suitePriceMO * nights:F2} lv.");
+                }
+                else if (nights > 7)
+                {
+                    var price = (studioPriceJS * nights) - studioPriceJS;
+                 
+
+                    Console.WriteLine($"Studio: {price:F2} lv.\nDouble: {doubleRoomPriceJS * nights:F2} lv.\nSuite: {suitePriceJS * nights:F2} lv.");
+                }
+                else
+                {
+                    Console.WriteLine($"Studio: {studioPriceJS * nights:F2} lv.\nDouble: {doubleRoomPriceJS * nights:F2} lv.\nSuite: {suitePriceJS * nights:F2} lv.");
+                }
+              
+            }
+             if (month == "July" || month == "August" || month == "December")
+            {
+                if (nights > 14)
+                {
+                    var price = (suitePriceJAD * nights) * 0.15;
+                    var price2 = suitePriceJAD * nights - price;
+                    Console.WriteLine($"Studio: {studioPriceJAD * nights:F2} lv.\nDouble: {doubleRoomPriceJAD * nights:F2} lv.\nSuite: {price2:F2} lv.");
+                }
+                else
+                {
+                    Console.WriteLine($"Studio: {studioPriceJAD * nights:F2} lv.\nDouble: {doubleRoomPriceJAD * nights:F2} lv.\nSuite: {suitePriceJAD * nights:F2} lv.");
+                }
+            }
+            
+        }
+    }
+}

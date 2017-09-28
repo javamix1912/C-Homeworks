@@ -1,0 +1,34 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnotherMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter employee name: ");
+            string emplName = Console.ReadLine();
+            emplName = EmplName(emplName);
+            Console.Write("Here the id: ");
+            int emplID = int.Parse(Console.ReadLine());
+            emplID = EmplID(emplID);
+            Console.WriteLine("Employee name is {0} and the id is {1}",emplName,emplID);
+        }
+
+         static int EmplID(int emplID)
+        {
+            
+            return emplID;
+        }
+
+        static string EmplName(string emplName)
+        {
+            return emplName;
+        }
+    }
+}
+

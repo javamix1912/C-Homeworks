@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace USDtoBGN
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            var bgn = double.Parse(Console.ReadLine());
+            var value = bgn * 1.79549;
+            
+            Console.Write(value);
+            Console.WriteLine(" Dollars");
+
+
+
+
+
+        }
+    }
+}

@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Megapixels
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int imageWidth = int.Parse(Console.ReadLine());
+            int imageHeight = int.Parse(Console.ReadLine());
+
+            double megapixels = (imageWidth * imageHeight) / 1000000.0;
+            
+
+            Console.WriteLine("{0}x{1} => {2:F1}MP",imageWidth,imageHeight,megapixels);
+        }
+    }
+}

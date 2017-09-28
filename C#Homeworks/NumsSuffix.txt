@@ -1,0 +1,7 @@
+1;    // int
+1.0;  // double
+1.0f; // float
+1.0m; // decimal
+1u;   // uint
+1L;   // long
+1UL;  // ulong

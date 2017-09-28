@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MethodTesting
+{
+    class Program
+    {
+
+        static void PrintStudent(string name, int age , double grade)
+        {
+            
+            Console.WriteLine($"Student: {name}\nAge: {age}\nGrade: {grade}");
+        }
+
+        static void Main(string[] args)
+      {
+            PrintStudent("Ivan", 20 , 4.76);
+      }
+       
+    }
+}

@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnotherMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double degree1 = double.Parse(Console.ReadLine());
+            degree1 = PrintCelsFromFare(degree1);
+            Console.WriteLine("{0:F2}",degree1);
+        }
+
+         static double PrintCelsFromFare(double degree1)
+        {
+            return degree1 = (degree1 - 32) * 5 / 9;
+        }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AnotherMethods
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double celsius2 = PrintFareToCelsius(60);
+            Console.WriteLine(celsius2);
+        }
+
+         static double PrintFareToCelsius(double degree)
+        {
+            double celsius = (degree - 32) * 5 / 9;
+            return celsius;
+        }
+
+        
+    }
+}

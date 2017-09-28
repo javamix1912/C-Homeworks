@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            var integer = int.Parse(Console.ReadLine());
+
+            var hex = Convert.ToString(integer, 16).ToUpper();
+            var binary = Convert.ToString(integer, 2);
+
+            Console.WriteLine(hex);
+            Console.WriteLine(binary);
+
+
+        }
+    }
+}

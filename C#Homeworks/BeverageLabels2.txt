@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name = Console.ReadLine();
+            int volume = int.Parse(Console.ReadLine());
+            int enContentPer100 = int.Parse(Console.ReadLine());
+            int sugarsPer100 = int.Parse(Console.ReadLine());
+
+            double EnContent = (enContentPer100 * volume) / 100.0;
+            double Sugars = (sugarsPer100 * volume) / 100.0;
+
+            Console.WriteLine("{0}ml {1}:\n{2}kcal, {3}g sugars",volume,name,EnContent,Sugars);
+            //220ml Nuka-Cola:
+            //660kcal, 154g sugars
+
+
+        }
+    }
+}

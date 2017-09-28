@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleSeptember
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string proff = Console.ReadLine();
+            int howMany = int.Parse(Console.ReadLine());
+            double waterPrice = 0.70;
+            double coffeePrice = 1.0;
+            double beerPrice = 1.70;
+            double teaPrice = 1.20;
+
+            if (proff == "Athlete")
+            {
+                double price1 = waterPrice * howMany;
+                Console.WriteLine("The Athlete has to pay {0:F2}.",price1);
+            } else if (proff == "Businessman" || proff == "Businesswoman")
+            {
+                double price2 = coffeePrice * howMany;
+                Console.WriteLine("The {0} has to pay {1:F2}.", proff,price2);
+            } else if (proff == "SoftUni Student")
+            {
+                double price3 = beerPrice * howMany;
+                Console.WriteLine("The SoftUni Student has to pay {0:F2}.", price3);
+            } else
+            {
+                double price4 = teaPrice * howMany;
+                Console.WriteLine("The {0} has to pay {1:F2}.", proff, price4);
+            }
+        }
+    }
+}
