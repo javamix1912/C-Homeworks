@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+       static void PrintPositive(int num)
+        {
+            Console.WriteLine("The number {0} is positive.", num);
+           
+        }
+
+        private static void PrintNegative(int num)
+        {
+            Console.WriteLine("The number {0} is negative." , num);
+           
+        }
+
+        private static void PrintZero(int num)
+        {
+            Console.WriteLine("The number {0} is zero." , num);
+        }
+
+        static void Main(string[] args)
+        {
+            int num = int.Parse(Console.ReadLine());
+            if (num > 0)
+            {
+                PrintPositive(num);
+            } else if (num < 0)
+            {
+                PrintNegative(num);
+            } else
+            {
+                PrintZero(num);
+            }
+            
+        }
+    }
+}

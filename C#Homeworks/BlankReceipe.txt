@@ -24,15 +24,12 @@ namespace MethodTesting
             Console.WriteLine("------------------------------");
             Console.WriteLine("© SoftUni");
         }
-        static void PrintReceipe()
+
+        static void Main(string[] args)
         {
             PrintHeader();
             PrintMiddle();
             PrintFooter();
-        }
-        static void Main(string[] args)
-        {
-            PrintReceipe();
         }
     }
 }
