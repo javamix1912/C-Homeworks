@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            {
+                LoopTest(10, 0);  // 0,1,2,3,4,5...10
+                Console.WriteLine();
+                LoopTest(10, 1);  // 1,2,3,4....11
+                Console.WriteLine();
+                LoopTest(10, 5);  // 5,6,7...15
+            }
+        }
+            public static void LoopTest(int count, int increase)
+        {
+            for (int i = 0; i <= count; i++)
+            {
+                Console.WriteLine(i + increase);
+            }
+        }
+    }
+}
+
+
+
+

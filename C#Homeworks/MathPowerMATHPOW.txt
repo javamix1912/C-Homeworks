@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _2Numbers
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            double n = double.Parse(Console.ReadLine());
+            int pow = int.Parse(Console.ReadLine());
+            GetNumPow(n, pow);
+        }
+
+        private static void GetNumPow(double n, int pow)
+        {
+            Console.WriteLine(Math.Pow(n, pow));
+        }
+    }
+}
+
