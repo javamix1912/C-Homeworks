@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] plus = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();   //sums nums in one row = 5 5 5 5 prints 20
+            Console.WriteLine(plus.Sum());
+        }
+
+       
+    }
+}
+
+----------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var sumator = Console.ReadLine().Split(' ').Select(t => int.Parse(t)).ToArray();
+            Console.WriteLine("The sum is: " + sumator.Sum());
+			//without []!
+        }
+
+       
+    }
+}
+
+-----------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var sumator = Console.ReadLine().Split(new char[] { ' ' } , StringSplitOptions.RemoveEmptyEntries).Select(t => int.Parse(t)).ToArray();
+            Console.WriteLine("The sum is: " + sumator.Sum());
+			// here we can ignore spaces - 5 5       5         5 will prints 20!
+        }
+
+       
+    }
+}
+
+

@@ -1,0 +1,85 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string[] items = input.Split(' ');
+            var reversed = items.Reverse();
+            Console.WriteLine(String.Join(" " , reversed));
+        }
+    }
+}
+
+-------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string[] items = input.Split(' ');
+            string[] reversed = items.Reverse().ToArray();
+            Console.WriteLine(String.Join(" " , reversed));
+        }
+    }
+}
+
+
+------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input = Console.ReadLine();
+            string[] items = input.Split(' ');
+            for (int i = items.Length-1; i >= 0; i--)
+            {
+                Console.Write(items[i] +" ");
+            }
+        }
+    }
+}
+--------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TechModuleARRAYS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine(String.Join(" " , Console.ReadLine().Split(' ').Reverse()));
+        }
+    }
+}
+
+
+
