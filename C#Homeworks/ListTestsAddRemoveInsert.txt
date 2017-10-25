@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ListTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> city = new List<string>();
+            city.Add("Plovdiv");	//0
+            city.Add("London");		//1
+            city.Add("Vegas");		//2
+            foreach (string cities in city)
+            {
+                Console.WriteLine(cities);
+            }
+            Console.WriteLine("*************");
+            city.Remove(city[0]);
+            foreach (string cities in city)
+            {
+                Console.WriteLine(cities);
+            }
+            Console.WriteLine("*************");
+            city.Insert(0, "Plovdiv");
+            foreach (string cities in city)
+            {
+                Console.WriteLine(cities);
+            }
+            Console.WriteLine("*************");
+            Console.WriteLine(city.IndexOf("Vegas"));      //shows that Vegas is on position - 2 !
+        }
+    }
+}

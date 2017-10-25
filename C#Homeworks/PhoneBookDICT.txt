@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ListTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var phonebook = new Dictionary<string, string>();
+            phonebook["Sami"] = "0945323151";
+            phonebook["Arhangel"] = "081875151";
+            phonebook["Mirabat"] = "664875151";
+            phonebook.Add("Sofka", "55544446");
+
+
+            foreach (var item in phonebook)
+            {
+                Console.WriteLine("{0} -> {1}", item.Key, item.Value);
+            }
+            Console.WriteLine("****");
+            foreach (var item in phonebook.Keys)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("****");
+            foreach (var item in phonebook.Values)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
