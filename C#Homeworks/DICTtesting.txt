@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DictionaryTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var test = new int[] { 1, 218 , 3, 422, 5 }; //new List<int>() { 1, 218, 3, 422, 5 };
+            var result = test.Where(x => x > 100).Skip(1).First(); // skip 218,prints 422
+            Console.WriteLine(string.Join(" ", result));
+
+        }
+
+
+    }
+}
+
