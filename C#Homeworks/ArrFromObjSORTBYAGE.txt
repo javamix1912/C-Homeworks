@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DictionaryTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var students = new[]
+            {
+                new {Name = "Ivan" , Age = 20},
+                new {Name = "Petko" , Age = 22},
+                new {Name = "Mirko" , Age = 34},
+                new {Name = "Zoran" , Age = 19},
+            };
+            var result = students.OrderBy(s => s.Age);
+            foreach (var st in result)
+            {
+                Console.WriteLine(st.Age + " " + st.Name);
+            }
+           
+        }
+
+
+    }
+}
+

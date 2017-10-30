@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DictTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<string, string> phonebook = new Dictionary<string, string>();
+            string input = Console.ReadLine();
+
+            while (input != "END")
+            {
+                string[] phoneParam = input.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                string command = phoneParam[0];
+                if (command == "A")
+                {
+                    string key = phoneParam[1];
+                    string value = phoneParam[2];
+                    phonebook[key] = value;    // use this instead from .Add because this will replace old value.
+                } else
+                {
+                    string key = phoneParam[1];
+                    if (phonebook.ContainsKey(key))
+                    {
+                        Console.WriteLine($"{key} -> {phonebook[key]}");
+                    } else
+                    {
+                        Console.WriteLine($"This contact doesn't exist");
+                    }
+                }
+
+                input = Console.ReadLine();
+            }
+        }
+    }
+}
