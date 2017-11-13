@@ -1,0 +1,20 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace justTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = @"C:\Users\Ivan\Desktop\C#";
+            proc.StartInfo.UseShellExecute = true;
+            proc.Start();
+        }
+    }
+}

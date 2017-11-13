@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+
+namespace DictTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string file = @"C:\SoftUni\01. Programming-Fundamentals-CSharp-Intro-and-Basic-Syntax-Lab.docx";  
+
+            var lastSlash = file.LastIndexOf("\\");
+            var fileName = file.Substring(lastSlash+1);
+            Console.WriteLine(fileName);   //01. Programming-Fundamentals-CSharp-Intro-and-Basic-Syntax-Lab.docx
+        }
+
+        
+    }
+}
+

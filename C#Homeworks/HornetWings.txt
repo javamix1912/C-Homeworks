@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Numerics;
+
+
+namespace ExtendedPractice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int NwingFlaps = int.Parse(Console.ReadLine());
+            double MdistanceTravelledPer1Kmeters = double.Parse(Console.ReadLine());
+            int PflapsBeforeBreak = int.Parse(Console.ReadLine());
+            double distance = (NwingFlaps / 1000.0) * MdistanceTravelledPer1Kmeters;
+
+            double secondsPerFlap = NwingFlaps / 100.0;
+            double rests = (NwingFlaps / PflapsBeforeBreak) * 5;
+
+            double res = secondsPerFlap + rests;
+            Console.WriteLine($"{distance:F2} m.");
+            Console.WriteLine($"{res} s.");
+        }
+    }
+}

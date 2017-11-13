@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Numerics;
+
+
+namespace ExtendedPractice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int wormLength = int.Parse(Console.ReadLine());
+            double wormWidth = double.Parse(Console.ReadLine());
+
+            double wormLengthInCM = wormLength * 100.0;
+
+            if (wormLengthInCM % wormWidth == 0 || wormWidth == 0)
+            {
+                double res = wormLengthInCM * wormWidth;
+                Console.WriteLine($"{res:F2}");
+            }
+            else {
+                double res2 = (wormLengthInCM / wormWidth) * 100;
+                Console.WriteLine($"{res2:F2}%");
+            }
+        }
+    }
+}

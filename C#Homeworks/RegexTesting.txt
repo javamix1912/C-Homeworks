@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+using System.Diagnostics;
+using System.Timers;
+
+namespace DictTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string pattern = @"\S+";   // without + gets all letters one by one
+            string input = @"Regex testing, we will see if its good";
+
+            foreach (Match m in Regex.Matches(input, pattern))
+            {
+                Console.WriteLine("'{0}' found at index {1}.", m.Value, m.Index);
+            }
+        }
+    }
+}
+

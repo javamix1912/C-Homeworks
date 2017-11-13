@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+
+namespace DictTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            decimal totalPrice = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                decimal price = ReadAndCalcMethod();
+                totalPrice += price;
+            }
+            Console.WriteLine($"Total: ${totalPrice:F2}");
+        }
+
+        private static decimal ReadAndCalcMethod()
+        {
+            decimal pricePerCapsule = decimal.Parse(Console.ReadLine());
+            string readDate = Console.ReadLine();
+            DateTime orderDate = DateTime.ParseExact(readDate, "d/M/yyyy", null);   // can replace null with CultureInfo.CurrentCulture or .InvariantCulture !
+            int daysInMonth = DateTime.DaysInMonth(orderDate.Year, orderDate.Month);
+            decimal capsulesCount = decimal.Parse(Console.ReadLine());
+            decimal result = (daysInMonth * capsulesCount) * pricePerCapsule;
+            Console.WriteLine($"The price for the coffee is: ${result:F2}");
+            return result;
+        }
+    }
+}
+

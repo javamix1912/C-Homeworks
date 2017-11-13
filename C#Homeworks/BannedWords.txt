@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+
+namespace DictTesting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] badWords = Console.ReadLine().Split(',' , ' ').Where(w => w.Length > 0).ToArray();
+            string text = Console.ReadLine();
+
+            foreach (var badWord in badWords)
+            {
+                var replacement = new string('*', badWord.Length);
+                text = text.Replace(badWord, replacement);
+            }
+            Console.WriteLine(text);
+        }
+
+        
+    }
+}
+
