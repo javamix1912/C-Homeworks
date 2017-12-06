@@ -1,4 +1,4 @@
-using System;
+	using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -76,3 +76,45 @@ namespace ListTesting
         }
     }
 }
+
+-----
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public class Example
+{
+    public static void Main()
+    {
+        string[] sequence = Console.ReadLine().ToLower().Split();
+        Dictionary<string, int> words = new Dictionary<string, int>();
+
+        foreach (var word in sequence)
+        {
+            if (words.ContainsKey(word))
+            {
+                words[word]++;
+            }
+            else
+            {
+                words[word] = 1;
+            }
+        }
+
+        List<string> odd = new List<string>();
+
+        foreach (var item in words)
+        {
+            if (item.Value % 2 != 0)
+            {
+                odd.Add(item.Key);
+            }
+        }
+
+        Console.WriteLine(String.Join("," , odd));
+    }
+}
+
+
+

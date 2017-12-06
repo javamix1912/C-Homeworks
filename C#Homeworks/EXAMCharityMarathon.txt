@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public class Example
+{
+    public static void Main()
+    {
+        decimal marathonDays = decimal.Parse(Console.ReadLine());
+        decimal runners = decimal.Parse(Console.ReadLine());
+        decimal averageLaps = decimal.Parse(Console.ReadLine());
+        decimal lapLength = decimal.Parse(Console.ReadLine());
+        decimal trackCapacityPerDay = decimal.Parse(Console.ReadLine());
+        decimal moneyPerKm = decimal.Parse(Console.ReadLine());
+
+        decimal totalCapacity = marathonDays * trackCapacityPerDay;
+        if (totalCapacity >= runners)
+        {
+            totalCapacity = runners;
+            decimal totalMetres = (runners * averageLaps) * lapLength;
+            decimal totalKm = totalMetres / 1000;
+            decimal money = totalKm * moneyPerKm;
+
+            Console.WriteLine("Money raised: {0:F2}", money);
+        }
+
+        if (totalCapacity < runners)
+        {
+            runners = totalCapacity;
+            decimal totalMetres = (runners * averageLaps) * lapLength;
+            decimal totalKm = totalMetres / 1000;
+            decimal money = totalKm * moneyPerKm;
+
+            Console.WriteLine("Money raised: {0:F2}", money);
+        }
+
+    }
+}
+
+

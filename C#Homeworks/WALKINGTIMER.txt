@@ -1,0 +1,20 @@
+using System;
+using System.Text.RegularExpressions;
+
+public class Example
+{
+    public static void Main()
+    {
+        TimeSpan time = TimeSpan.Parse(Console.ReadLine());
+        int step = int.Parse(Console.ReadLine()) % 86400;
+        int secForStep = int.Parse(Console.ReadLine()) % 86400;
+
+        long res = step * secForStep;
+
+        TimeSpan seconds = TimeSpan.FromSeconds(res);
+
+        TimeSpan finale = time + seconds;
+
+        Console.WriteLine("Time Arrival: {0:hh\\:mm\\:ss}" , finale);
+    }
+}

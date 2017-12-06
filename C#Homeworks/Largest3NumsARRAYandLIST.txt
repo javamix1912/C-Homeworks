@@ -56,3 +56,29 @@ namespace DictionaryTesting
     }
 }
 
+-------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public class Example
+{
+    public static void Main()
+    {
+        int[] nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        List<int> list = new List<int>();
+
+        foreach (var item in nums)
+        {
+            list.Add(item);
+        }
+
+        List<int> list2 = new List<int>(list.OrderByDescending(x => x).Take(3));
+        Console.WriteLine(string.Join(" ", list2));
+    }
+}
+
+
+
+
