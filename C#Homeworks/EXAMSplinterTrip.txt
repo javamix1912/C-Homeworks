@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public class Example
+{
+    public static void Main()
+    {
+        double tripDistance = double.Parse(Console.ReadLine());
+        double fuelTankCapacity = double.Parse(Console.ReadLine());
+        double MilesHeavyWings = double.Parse(Console.ReadLine());
+
+        double MilesNonHeavyWings = tripDistance - MilesHeavyWings;
+        double NonHeavyWingsConsumption = MilesNonHeavyWings * 25;
+        double HeavyWingsConsumption = MilesHeavyWings * (25 * 1.5);
+        double FuelConsumption = NonHeavyWingsConsumption + HeavyWingsConsumption;
+        double Tolerance = FuelConsumption * 0.05;
+
+        double totalFuelConsumption = FuelConsumption + Tolerance;
+
+        if (fuelTankCapacity - totalFuelConsumption >= 0)
+        {
+            Console.WriteLine("Fuel needed: {0:F2}L", totalFuelConsumption);
+            double res = fuelTankCapacity - totalFuelConsumption;
+            Console.WriteLine("Enough with {0:F2}L to spare!" , res);
+        }
+
+        if (fuelTankCapacity - totalFuelConsumption < 0)
+        {
+            double res1 = FuelConsumption + Tolerance;
+            double res = res1 - fuelTankCapacity;
+            Console.WriteLine("Fuel needed: {0:F2}L" , res1);
+            Console.WriteLine("We need {0:F2}L more fuel.",res);
+        } 
+
+    }
+}
+
+

@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+
+public class Example
+{
+    public static void Main()
+    {
+        int n = int.Parse(Console.ReadLine());
+
+        for (int i = 0; i < n; i++)
+        {
+            int totalLength = int.Parse(Console.ReadLine());
+            decimal totalWidth = decimal.Parse(Console.ReadLine());
+            int wingLength = int.Parse(Console.ReadLine());
+            decimal totalYears = ((long)totalLength * totalLength) * (totalWidth + (2 * wingLength));
+            Console.WriteLine(totalYears);
+        }
+    }
+}
+
+
